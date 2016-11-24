@@ -5,8 +5,10 @@
 
 ## Language used
 * [Go](https://golang.org/)
-    * [Quickly learn features of Go](https://learnxinyminutes.com/docs/go/)
-    * [Handbook](https://www.golang-book.com/books/intro)
+    * [Quickly learn features of Go](https://learnxinyminutes.com/docs/go/), enough for an experienced programmer to do things with Go.
+    * [Book for beginner](https://www.golang-book.com/books/intro), can also act as a handbook.
+    * [Playground](https://tour.golang.org/welcome/1)
+    * [Other resources](https://github.com/dariubs/GoBooks)
 
 ## License
 * MIT
