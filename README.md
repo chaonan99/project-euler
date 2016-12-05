@@ -10,5 +10,9 @@
     * [Playground](https://tour.golang.org/welcome/1)
     * [Other resources](https://github.com/dariubs/GoBooks)
 
+## Resources that I find useful
+* [Programming with Prime Numbers](https://programmingpraxis.files.wordpress.com/2012/09/primenumbers.pdf)
+* [C++ Prime Generator](http://primesieve.org/segmented_sieve.html)
+
 ## License
 * MIT
