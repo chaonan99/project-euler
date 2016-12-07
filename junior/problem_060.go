@@ -3,29 +3,63 @@ package main
 
 import (
     "fmt"
-    // m"math"
+    "time"
 )
 
 func main() {
-    // under := 3000000000 Not found under this
-    a := primeGenerate(under)
-    cp := 673
-    for {
-        cp += 2
-        tmp1 := conc(673, cp)
-        tmp2 := conc(cp, 673)
-        if tmp1 > under || tmp2 > under {
-            fmt.Println("Not found")
-            break
-        }
-        if a[cp] && a[tmp1] && a[tmp2] &&
-        a[conc(109, cp)] && a[conc(cp, 109)] &&
-        a[conc(7, cp)] && a[conc(cp, 7)] &&
-        a[conc(3, cp)] && a[conc(cp, 3)] {
-            break
+    start := time.Now()
+    a := primeGenerate(83998399)
+    l := listSet(a, 8400, 5)
+    elapsed := time.Since(start)
+    for _, r := range l {
+        fmt.Println(r, "sum=", Sum(r))
+    }
+    fmt.Println("Solution 60 took ", elapsed)
+}
+
+func Sum(ori []int) (res int) {
+    for _, o := range ori {
+        res += o
+    }
+    return
+}
+
+func listSet(lut []bool, r int, aimLen int) [][]int {
+    var resList [][]int
+    for p := 3; p < r - aimLen*2; p += 2 {
+        if lut[p] {
+            res := generateSet(lut, lut[:r], []int{p}, aimLen)
+            if len(res) > 0 {
+                resList = append(resList, res)
+            }
         }
     }
-    fmt.Println(cp)
+    return resList
+}
+
+func generateSet(lut []bool, rt []bool, seed []int, aimLen int) []int {
+    if len(seed) >= aimLen {
+        return seed
+    }
+    for p := seed[len(seed)-1] + 2; p < len(rt) ; p+=2 {
+        if !rt[p] {
+            continue
+        }
+        allPrime := true
+        for _, si := range seed {
+            if !lut[conc(si, p)] || !lut[conc(p, si)] {
+                allPrime = false
+                break
+            }
+        }
+        if allPrime {
+            res := generateSet(lut, rt, append(seed, p), aimLen)
+            if len(res) > 0 {
+                return res
+            }
+        }
+    }
+    return make([]int, 0)
 }
 
 func conc(a, b int) int {
@@ -54,12 +88,3 @@ func primeGenerate(under int) []bool {
     }
     return a
 }
-
-// func isPrime(ori int) bool {
-//     div := int(m.Floor(m.Sqrt(float64(ori))))
-//     if div % 2 == 0 {
-//         div --
-//     }
-//     for ; ori % div != 0; div -= 2 {}
-//     return div == 1
-// }
