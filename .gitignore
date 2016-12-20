@@ -1,3 +1,4 @@
 overview/
 *.sublime-project
 *.sublime-workspace
+*.ipynb*
