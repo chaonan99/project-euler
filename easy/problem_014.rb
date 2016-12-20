@@ -1,3 +1,5 @@
+# 2016-12-20
+
 upper_bound = 1000000
 max_len = 0
 st = 2
