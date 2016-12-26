@@ -1,7 +1,7 @@
 # 2016-12-20
 
 array = []
-File.open("problem_011_input.txt", "r") do |f|
+File.open("../input/p011_input.txt", "r") do |f|
   f.each_line do |line|
      array << line.split
   end

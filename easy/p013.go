@@ -18,7 +18,7 @@ func check(e error) {
 // int32 range: -2147483648 through 2147483647, not sufficient for the program use
 // int64 range:  -9223372036854775808 through 9223372036854775807, sufficient
 func main() {
-    dat, err := ioutil.ReadFile("problem_013_input.txt")
+    dat, err := ioutil.ReadFile("../input/p013_input.txt")
     check(err)
     numbers := strings.Split(string(dat), "\r\n")
     // fmt.Println(len(numbers), len(numbers[0]), numbers[0][40:50])
