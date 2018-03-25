@@ -1,11 +1,11 @@
-// 2016-12-26
+//
 
 package main
 
 import (
-    "fmt"
+  "fmt"
 )
 
 func main() {
-    
+
 }

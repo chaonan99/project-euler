@@ -10,6 +10,8 @@
     * [Playground](https://tour.golang.org/welcome/1).
     * [Effective Go](https://golang.org/doc/effective_go.html), another reference.
     * [Other resources](https://github.com/dariubs/GoBooks).
+* C++
+    * Some of the solution needs boost
 
 ## Resources that I find useful
 * [Programming with Prime Numbers](https://programmingpraxis.files.wordpress.com/2012/09/primenumbers.pdf)

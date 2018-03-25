@@ -3,9 +3,13 @@ project(PROJECT_EULER)
 
 set(CMAKE_C_COMPILER "g++-7")
 set(CMAKE_CXX_COMPILER "g++-7")
-set (CMAKE_CXX_STANDARD 11)
-
-# Use compiler optimization or not
+set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O")
-add_executable(p061 junior/p061.cxx)
-add_executable(p062 junior/p062.cxx)
+
+# find_package(Boost REQUIRED)
+# include_directories(${Boost_INCLUDE_DIRS})
+
+# add_executable(p061 junior/p061.cxx)
+add_executable(p101 junior/p101.cxx)
+# target_link_libraries(p062 ${Boost_LIBRARIES})
+# target_link_libraries(p062 gmp)

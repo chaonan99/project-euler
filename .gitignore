@@ -1,5 +1,6 @@
 overview
 build
+._.DS_Store
 *.sublime-project
 *.sublime-workspace
 *.ipynb*
