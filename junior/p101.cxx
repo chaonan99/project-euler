@@ -1,13 +1,15 @@
 // 2018-03-24
 #include <iostream>
 #include <time.h>
+#include <boost/multiprecision/gmp.hpp>
 
 using namespace std;
+using namespace boost::multiprecision;
 
-int func10(int n)
+mpz_int func10(int n)
 {
-  int it = 1;
-  int sum = 1;
+  mpz_int it = 1;
+  mpz_int sum = 1;
   for (int i = 0; i < 10; i++)
   {
     it *= (-n);
@@ -15,6 +17,8 @@ int func10(int n)
   }
   return sum;
 }
+
+mpz_int 
 
 void work()
 {
